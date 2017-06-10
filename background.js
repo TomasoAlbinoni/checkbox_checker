@@ -30,7 +30,8 @@ chrome.tabs.onActivated.addListener(function(activeInfo) {
 // Listen for current tab to be changed
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   
-  setIcon(states[tab.id]);
+  states[tab.id] = false;
+  setIcon(false);
   
 });
 
